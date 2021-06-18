@@ -24,6 +24,7 @@ public class Student {
         this.password = password;
     }
 
+
     public String getPassword() {
         return password;
     }

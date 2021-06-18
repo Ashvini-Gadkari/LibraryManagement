@@ -19,7 +19,9 @@ public class StudentController {
 
     //get all
     @GetMapping("/students")
-    public List<Student> getallStudent(){
+    public List<Student> getAllStudent(){
         return studentRepository.findAll();
     }
+
+
 }
