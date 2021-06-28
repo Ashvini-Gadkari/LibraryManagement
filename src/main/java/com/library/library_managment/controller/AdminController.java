@@ -23,7 +23,5 @@ public class AdminController {
         return adminRepository.findAll();
     }
 
-    public 
-
 
 }

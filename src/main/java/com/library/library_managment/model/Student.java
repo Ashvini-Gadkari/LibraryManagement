@@ -10,9 +10,11 @@ public class Student {
     private long Id;
     @Column(name = "first_name")
     private String firstName;
-    @Column(name = "email")
+
+    @Column(name = "email",nullable = false,unique = true,length = 45)
     private String EmailId;
-    @Column(name = "password")
+
+    @Column(name = "password",nullable = false,length = 64)
     private String password;
 
     public Student() {

@@ -1,12 +1,10 @@
 package com.library.library_managment.controller;
 
+import com.library.library_managment.model.Book;
 import com.library.library_managment.model.Student;
 import com.library.library_managment.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,12 @@ public class StudentController {
     @GetMapping("/students")
     public List<Student> getAllStudent(){
         return studentRepository.findAll();
+    }
+
+    //add
+    @PostMapping("/students")
+    public Student addStudent(@RequestBody Student student){
+        return studentRepository.save(student);
     }
 
 
